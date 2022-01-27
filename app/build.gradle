@@ -1,7 +1,13 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+//    id 'dagger.hilt.android.plugin'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'kotlin-parcelize'
 }
+
+apply from: '../config/detekt/detekt.gradle'
 
 android {
     compileSdk 31
@@ -22,22 +28,36 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = '1.8'
+
+    buildFeatures {
+        viewBinding true
     }
 }
 
 dependencies {
+    implementation project(':core-network')
 
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.4.1'
-    implementation 'com.google.android.material:material:1.5.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
-    testImplementation 'junit:junit:4.13.2'
+    implementation library.coreKtx
+    implementation androidLibrary.appCompat
+    implementation androidLibrary.material
+    implementation androidLibrary.constraintLayout
+    implementation androidLibrary.recyclerView
+
+    implementation androidLibrary.navigationUi
+    implementation androidLibrary.navigationFragment
+
+    implementation androidLibrary.koin
+
+    implementation library.coroutines
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    testImplementation testLibrary.jUnit
+    testImplementation testLibrary.kotest
+    testImplementation testLibrary.archCore
+
+    androidTestImplementation testAndroidLibrary.jUnit
+    androidTestImplementation testAndroidLibrary.espresso
+
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 }

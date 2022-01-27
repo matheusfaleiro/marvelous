@@ -1,0 +1,78 @@
+ext {
+    libraryVersion = [
+            kotlinVersion    : '1.6.10',
+            coroutinesVersion: '1.5.0',
+            coreVersion      : '1.7.0',
+            detektVersion    : '1.19.0',
+            toolsVersion     : '7.1.0-rc01',
+            moshiVersion     : '1.12.0'
+    ]
+
+    androidLibraryVersion = [
+            appCompatVersion       : '1.4.0',
+            materialVersion        : '1.6.0-alpha01',
+            lifecycleVersion       : '2.3.1',
+            constraintLayoutVersion: '2.1.2',
+            recyclerViewVersion    : '1.2.1',
+            koinVersion            : '3.1.4',
+            fragmentKtxVersion     : '1.3.5',
+            navigationVersion      : '2.4.0-rc01',
+            safeArgsVersion        : '2.3.5',
+            roomVersion            : '2.4.0',
+            jUnitVersion           : '1.1.3',
+            espressoVersion        : '3.4.0'
+    ]
+
+    testLibraryVersion = [
+            jUnitVersion         : '4.13.2',
+            mockkVersion         : '1.12.0',
+            coreVersion          : '1.4.0',
+            kotestVersion        : '5.0.3',
+            roboeletricVersion   : '4.6.1',
+            archCoreVersion      : '2.1.0',
+            coroutinesTestVersion: '1.6.0-RC'
+    ]
+
+    library = [
+            coreKtx          : "androidx.core:core-ktx:${libraryVersion.coreVersion}",
+            retrofit         : "com.squareup.retrofit2:retrofit:${libraryVersion.retrofitVersion}",
+            retrofitConverter: "com.squareup.retrofit2:converter-moshi:${libraryVersion.retrofitVersion}",
+            coroutines       : "org.jetbrains.kotlinx:kotlinx-coroutines-core:${libraryVersion.coroutinesVersion}"
+    ]
+
+    androidLibrary = [
+            appCompat         : "androidx.appcompat:appcompat:${androidLibraryVersion.appCompatVersion}",
+            material          : "com.google.android.material:material:${androidLibraryVersion.materialVersion}",
+            constraintLayout  : "androidx.constraintlayout:constraintlayout:${androidLibraryVersion.constraintLayoutVersion}",
+            recyclerView      : "androidx.recyclerview:recyclerview:${androidLibraryVersion.recyclerViewVersion}",
+            lifecycleViewModel: "androidx.lifecycle:lifecycle-viewmodel-ktx:${androidLibraryVersion.lifecycleVersion}",
+            lifecycleLiveData : "androidx.lifecycle:lifecycle-livedata-ktx:${androidLibraryVersion.lifecycleVersion}",
+            lifeCycleExtension: "androidx.lifecycle:lifecycle-extensions:${androidLibraryVersion.lifecycleVersion}",
+            lifecycleCommon   : "androidx.lifecycle:lifecycle-common-java8:${androidLibraryVersion.lifecycleVersion}",
+            lifecycleRuntime  : "androidx.lifecycle:lifecycle-runtime-ktx:${androidLibraryVersion.lifecycleVersion}",
+            fragmentKtx       : "androidx.fragment:fragment-ktx:${androidLibraryVersion.fragmentKtxVersion}",
+            koin              : "io.insert-koin:koin-android:${androidLibraryVersion.koinVersion}",
+            navigationFragment: "androidx.navigation:navigation-fragment-ktx:${androidLibraryVersion.navigationVersion}",
+            navigationUi      : "androidx.navigation:navigation-ui-ktx:${androidLibraryVersion.navigationVersion}",
+            room              : "androidx.room:room-ktx:${androidLibraryVersion.roomVersion}",
+            roomRuntime       : "androidx.room:room-runtime:${androidLibraryVersion.roomVersion}",
+            roomCompiler      : "androidx.room:room-compiler:${androidLibraryVersion.roomVersion}"
+
+    ]
+
+    testLibrary = [
+            jUnit         : "junit:junit:${testLibraryVersion.jUnitVersion}",
+            mockk         : "io.mockk:mockk:${testLibraryVersion.mockkVersion}",
+            core          : "androidx.test:core-ktx:${testLibraryVersion.coreVersion}",
+            kotest        : "io.kotest:kotest-runner-junit5:${testLibraryVersion.kotestVersion}",
+            archCore      : "androidx.arch.core:core-testing:${testLibraryVersion.archCoreVersion}",
+            coroutinesTest: "org.jetbrains.kotlinx:kotlinx-coroutines-test:${testLibraryVersion.coroutinesTestVersion}"
+    ]
+
+    testAndroidLibrary = [
+            roboeletric: "org.robolectric:robolectric:${testLibraryVersion.roboeletricVersion}",
+            roomTesting: "androidx.room:room-testing:${androidLibraryVersion.roomVersion}",
+            jUnit      : "androidx.test.ext:junit:${androidLibraryVersion.jUnitVersion}",
+            espresso   : "androidx.test.espresso:espresso-core:${androidLibraryVersion.espressoVersion}"
+    ]
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/id_menu_heroes"
+    app:startDestination="@id/heroesFragment">
+
+    <fragment
+        android:id="@+id/heroesFragment"
+        android:name="dev.theuzfaleiro.marvelous.presentation.heroes.HeroesFragment"
+        android:label="@string/menu_heroes"
+        tools:layout="@layout/fragment_heroes" />
+</navigation>
