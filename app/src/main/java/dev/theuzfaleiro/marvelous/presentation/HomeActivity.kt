@@ -6,9 +6,11 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
+import dagger.hilt.android.AndroidEntryPoint
 import dev.theuzfaleiro.marvelous.R
 import dev.theuzfaleiro.marvelous.databinding.ActivityHomeBinding
 
+@AndroidEntryPoint
 class HomeActivity : AppCompatActivity() {
     private lateinit var navigationController: NavController
     private lateinit var applicationBarConfiguration: AppBarConfiguration
