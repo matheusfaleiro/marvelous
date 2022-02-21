@@ -1,4 +1,4 @@
-package dev.theuzfaleiro.network.data.network.response
+package dev.theuzfaleiro.marvelous.framework.network.response
 
 import com.squareup.moshi.Json
 

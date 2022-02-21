@@ -5,8 +5,8 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import dev.theuzfaleiro.marvelous.BuildConfig
-import dev.theuzfaleiro.network.data.network.MarvelService
-import dev.theuzfaleiro.network.data.network.interceptor.AuthorizationInterceptor
+import dev.theuzfaleiro.marvelous.framework.network.MarvelService
+import dev.theuzfaleiro.marvelous.framework.network.interceptor.AuthorizationInterceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

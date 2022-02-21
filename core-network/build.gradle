@@ -9,10 +9,10 @@ java {
 }
 
 dependencies {
-    api(platform("com.squareup.okhttp3:okhttp-bom:4.9.0"))
-    api("com.squareup.okhttp3:okhttp")
-    api("com.squareup.okhttp3:logging-interceptor")
+    def paging_version = "3.1.0"
+    implementation "androidx.paging:paging-common:$paging_version"
 
-    api library.retrofit
-    api library.retrofitConverter
+    implementation library.coroutines
+
+    implementation "javax.inject:javax.inject:1"
 }

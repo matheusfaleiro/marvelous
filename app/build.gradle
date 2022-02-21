@@ -60,13 +60,17 @@ dependencies {
     implementation androidLibrary.navigationUi
     implementation androidLibrary.navigationFragment
 
-    implementation 'com.google.dagger:hilt-android:2.40.5'
-    kapt 'com.google.dagger:hilt-compiler:2.40.5'
+    implementation 'com.google.dagger:hilt-android:2.41'
+    kapt 'com.google.dagger:hilt-compiler:2.41'
 
-    implementation library.coroutines
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    api(platform("com.squareup.okhttp3:okhttp-bom:4.9.0"))
+    api("com.squareup.okhttp3:okhttp")
+    api("com.squareup.okhttp3:logging-interceptor")
 
-    implementation("io.coil-kt:coil:1.4.0")
+    api library.retrofit
+    api library.retrofitConverter
+
+    implementation "io.coil-kt:coil:1.4.0"
 
     testImplementation testLibrary.jUnit
     testImplementation testLibrary.kotest

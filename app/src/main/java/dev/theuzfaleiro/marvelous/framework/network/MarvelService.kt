@@ -1,6 +1,6 @@
-package dev.theuzfaleiro.network.data.network
+package dev.theuzfaleiro.marvelous.framework.network
 
-import dev.theuzfaleiro.network.data.network.response.DataWrapper
+import dev.theuzfaleiro.marvelous.framework.network.response.DataWrapper
 import retrofit2.http.GET
 import retrofit2.http.QueryMap
 

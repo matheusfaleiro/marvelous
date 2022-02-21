@@ -1,4 +1,4 @@
-package dev.theuzfaleiro.network.data.network.interceptor
+package dev.theuzfaleiro.marvelous.framework.network.interceptor
 
 import okhttp3.Interceptor
 import okhttp3.Response
