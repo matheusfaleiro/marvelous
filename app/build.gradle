@@ -66,6 +66,8 @@ dependencies {
     implementation library.coroutines
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
+    implementation("io.coil-kt:coil:1.4.0")
+
     testImplementation testLibrary.jUnit
     testImplementation testLibrary.kotest
     testImplementation testLibrary.archCore

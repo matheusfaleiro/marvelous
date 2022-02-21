@@ -19,7 +19,7 @@ private const val TIMEOUT_SECONDS = 15L
 
 @Module
 @InstallIn(SingletonComponent::class)
-object Network {
+object NetworkModule {
 
     @Provides
     fun providesNetworkService(retrofit: Retrofit): MarvelService =
