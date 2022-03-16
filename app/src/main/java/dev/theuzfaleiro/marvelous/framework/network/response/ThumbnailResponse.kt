@@ -2,9 +2,9 @@ package dev.theuzfaleiro.marvelous.framework.network.response
 
 import com.squareup.moshi.Json
 
-data class Thumbnail(
+data class ThumbnailResponse(
     @Json(name = "path")
-    val path: String,
+    val path: String = "",
     @Json(name = "extension")
-    val extension: String
+    val extension: String = ""
 )

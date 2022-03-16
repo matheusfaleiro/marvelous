@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">Marvelous</string>
 
+    <!--  Error Messages  -->
+    <string name="error_heroes_loading">Loading Failed</string>
+    <string name="error_heroes_try_again">Error While Loading The Next Page. Please, Try Again!</string>
+
     <!--  Menu  -->
     <string name="menu_heroes">Heroes</string>
     <string name="menu_favorites">Favorites</string>
@@ -8,4 +12,5 @@
 
     <!--  Content Description  -->
     <string name="character_image">Character Image</string>
+    <string name="button_retry">Try Again</string>
 </resources>

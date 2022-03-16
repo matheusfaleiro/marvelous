@@ -9,12 +9,14 @@ java {
 }
 
 dependencies {
-    testImplementation project(':testing')
+    api project(":core-network")
 
     def paging_version = "3.1.0"
     implementation "androidx.paging:paging-common:$paging_version"
 
-    implementation library.coroutines
-
-    implementation "javax.inject:javax.inject:1"
+    api testLibrary.jUnit
+    api testLibrary.mockk
+    api testLibrary.kotest
+    api testLibrary.archCore
+    api testLibrary.coroutinesTest
 }

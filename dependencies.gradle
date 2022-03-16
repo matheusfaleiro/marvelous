@@ -12,7 +12,7 @@ ext {
     androidLibraryVersion = [
             appCompatVersion       : '1.4.1',
             materialVersion        : '1.6.0-alpha02',
-            lifecycleVersion       : '2.3.1',
+            lifecycleVersion       : '2.4.1',
             constraintLayoutVersion: '2.1.3',
             recyclerViewVersion    : '1.2.1',
             koinVersion            : '3.1.4',
@@ -26,12 +26,12 @@ ext {
 
     testLibraryVersion = [
             jUnitVersion         : '4.13.2',
-            mockkVersion         : '1.12.0',
+            mockkVersion         : '1.12.3',
             coreVersion          : '1.4.0',
             kotestVersion        : '5.1.0',
             roboeletricVersion   : '4.6.1',
             archCoreVersion      : '2.1.0',
-            coroutinesTestVersion: '1.6.0-RC'
+            coroutinesTestVersion: '1.6.0'
     ]
 
     library = [

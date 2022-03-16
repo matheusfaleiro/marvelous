@@ -28,7 +28,7 @@ android {
 
         buildConfigField "String", "PUBLIC_KEY", apikeyProperties['PUBLIC_KEY']
         buildConfigField "String", "PRIVATE_KEY", apikeyProperties['PRIVATE_KEY']
-        buildConfigField "String", "BASE_URL", '"https://gateway.marvel.com/v1/public"'
+        buildConfigField "String", "BASE_URL", '"https://gateway.marvel.com/v1/public/"'
     }
 
     buildTypes {
@@ -50,6 +50,7 @@ android {
 
 dependencies {
     implementation project(':core-network')
+    testImplementation project(':testing')
 
     implementation library.coreKtx
     implementation androidLibrary.appCompat
@@ -60,21 +61,26 @@ dependencies {
     implementation androidLibrary.navigationUi
     implementation androidLibrary.navigationFragment
 
+    implementation androidLibrary.lifecycleViewModel
+    implementation androidLibrary.lifecycleLiveData
+    implementation androidLibrary.lifecycleRuntime
+
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
+    implementation "androidx.paging:paging-runtime:3.1.0"
+
     implementation 'com.google.dagger:hilt-android:2.41'
     kapt 'com.google.dagger:hilt-compiler:2.41'
 
-    api(platform("com.squareup.okhttp3:okhttp-bom:4.9.0"))
-    api("com.squareup.okhttp3:okhttp")
-    api("com.squareup.okhttp3:logging-interceptor")
+    implementation(platform("com.squareup.okhttp3:okhttp-bom:4.9.0"))
+    implementation("com.squareup.okhttp3:okhttp")
+    implementation("com.squareup.okhttp3:logging-interceptor")
 
-    api library.retrofit
-    api library.retrofitConverter
+    implementation library.retrofit
+    implementation library.retrofitConverter
 
     implementation "io.coil-kt:coil:1.4.0"
 
-    testImplementation testLibrary.jUnit
-    testImplementation testLibrary.kotest
-    testImplementation testLibrary.archCore
 
     androidTestImplementation testAndroidLibrary.jUnit
     androidTestImplementation testAndroidLibrary.espresso

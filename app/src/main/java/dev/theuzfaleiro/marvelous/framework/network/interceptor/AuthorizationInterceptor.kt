@@ -7,9 +7,9 @@ import java.security.MessageDigest.getInstance
 import java.util.Calendar
 import kotlin.time.Duration.Companion.seconds
 
-private const val QUERY_PARAMETER_TIMESTAMP = "TS"
-private const val QUERY_PARAMETER_API_KEY = "APIKEY"
-private const val QUERY_PARAMETER_HASH = "HASH "
+private const val QUERY_PARAMETER_TIMESTAMP = "ts"
+private const val QUERY_PARAMETER_API_KEY = "apikey"
+private const val QUERY_PARAMETER_HASH = "hash"
 
 private const val RADIX = 16
 private const val HASH_LENGTH = 32
