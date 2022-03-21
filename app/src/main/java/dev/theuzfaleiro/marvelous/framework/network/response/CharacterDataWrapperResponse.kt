@@ -1,10 +1,10 @@
 package dev.theuzfaleiro.marvelous.framework.network.response
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 data class CharacterDataWrapperResponse(
-    @Json(name = "copyright")
+    @SerializedName(value = "copyright")
     val copyright: String,
-    @Json(name = "data")
+    @SerializedName(value = "data")
     val data: CharacterDataContainerResponse
 )

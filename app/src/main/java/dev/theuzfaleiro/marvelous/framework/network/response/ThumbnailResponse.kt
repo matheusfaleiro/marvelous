@@ -1,10 +1,10 @@
 package dev.theuzfaleiro.marvelous.framework.network.response
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 data class ThumbnailResponse(
-    @Json(name = "path")
-    val path: String = "",
-    @Json(name = "extension")
-    val extension: String = ""
+    @SerializedName("path")
+    val path: String,
+    @SerializedName("extension")
+    val extension: String
 )

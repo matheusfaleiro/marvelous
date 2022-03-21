@@ -1,12 +1,12 @@
 package dev.theuzfaleiro.marvelous.framework.network.response
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 data class CharacterDataContainerResponse(
-    @Json(name = "offset")
+    @SerializedName("offset")
     val offset: Int,
-    @Json(name = "total")
+    @SerializedName("total")
     val total: Int,
-    @Json(name = "results")
+    @SerializedName("results")
     val results: List<CharacterResponse>
 )

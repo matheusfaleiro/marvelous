@@ -80,6 +80,9 @@ class HeroesFragment : Fragment() {
                     setLoadingVisibility(false)
                     FLIPPER_POSITION_HEROES
                 }
+                else -> {
+                    FLIPPER_POSITION_ERROR
+                }
             }
         }
     }

@@ -7,13 +7,13 @@ import dagger.hilt.components.SingletonComponent
 import dev.theuzfaleiro.marvelous.BuildConfig
 import dev.theuzfaleiro.marvelous.framework.network.MarvelService
 import dev.theuzfaleiro.marvelous.framework.network.interceptor.AuthorizationInterceptor
-import okhttp3.OkHttpClient
-import okhttp3.logging.HttpLoggingInterceptor
-import retrofit2.Retrofit
-import retrofit2.converter.moshi.MoshiConverterFactory
 import java.util.Calendar
 import java.util.TimeZone
 import java.util.concurrent.TimeUnit.SECONDS
+import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 private const val TIMEOUT_SECONDS = 15L
 
@@ -29,7 +29,7 @@ object NetworkModule {
     fun providesBaseUrl(): String = BuildConfig.BASE_URL
 
     @Provides
-    fun providesMoshiConverterFactory(): MoshiConverterFactory = MoshiConverterFactory.create()
+    fun providesMoshiConverterFactory(): GsonConverterFactory = GsonConverterFactory.create()
 
     @Provides
     fun providesHttpLoggingInterceptor(): HttpLoggingInterceptor =
@@ -62,7 +62,7 @@ object NetworkModule {
     fun providesRetrofit(
         baseUrl: String,
         okHttpClient: OkHttpClient,
-        converterFactory: MoshiConverterFactory
+        converterFactory: GsonConverterFactory
     ): Retrofit =
         Retrofit.Builder()
             .baseUrl(baseUrl)
