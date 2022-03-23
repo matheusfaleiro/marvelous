@@ -34,6 +34,15 @@ android {
         buildConfigField "String", "BASE_URL", '"https://gateway.marvel.com/v1/public/"'
     }
 
+    signingConfigs {
+        release {
+            keyAlias 'marvelous'
+            keyPassword '**********'
+            storePassword '**********'
+            storeFile file('/Users/matheusfaleiro/Documents/Personal/Android/marvelous/playstore/marvelous_keys')
+        }
+    }
+
     buildTypes {
         debug {
             debuggable true
@@ -45,6 +54,7 @@ android {
                     'proguard-rules-staging.pro'
         }
         release {
+            signingConfig signingConfigs.release
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
