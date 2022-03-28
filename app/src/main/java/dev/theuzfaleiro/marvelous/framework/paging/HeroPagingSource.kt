@@ -15,6 +15,8 @@ class HeroPagingSource @Inject constructor(
     private val heroRemoteDataSource: IHeroRemoteDataSource<CharacterDataWrapperResponse>,
     private val query: String
 ) : PagingSource<Int, Hero>() {
+
+    @Suppress("TooGenericExceptionCaught")
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Hero> {
         return try {
             val offset = params.key ?: INITIAL_OFFSET
