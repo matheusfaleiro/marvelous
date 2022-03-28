@@ -46,13 +46,13 @@ class HeroPagingSourceTest {
                 total = 2,
                 results = listOf(
                     CharacterResponse(
-                        id = "0", name = "Spider Man",
+                        id = 0, name = "Spider Man",
                         thumbnail = ThumbnailResponse(
                             path = "",
                             extension = ""
                         )
                     ), CharacterResponse(
-                        id = "0", name = "Batman",
+                        id = 0, name = "Batman",
                         thumbnail = ThumbnailResponse(
                             path = "",
                             extension = ""
