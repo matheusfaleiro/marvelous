@@ -5,6 +5,7 @@ plugins {
     id 'dagger.hilt.android.plugin'
     id 'androidx.navigation.safeargs.kotlin'
     id 'kotlin-parcelize'
+    id 'com.google.gms.google-services'
 }
 
 apply from: '../config/detekt/detekt.gradle'
@@ -25,8 +26,6 @@ android {
         versionCode 1
         versionName "1.0"
 
-        multiDexEnabled true
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         buildConfigField "String", "PUBLIC_KEY", apikeyProperties['PUBLIC_KEY']
@@ -45,15 +44,18 @@ android {
 
     buildTypes {
         debug {
+            applicationIdSuffix ".debug"
             debuggable true
         }
         staging {
             initWith debug
+            applicationIdSuffix ".staging"
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro',
                     'proguard-rules-staging.pro'
         }
         release {
+            applicationIdSuffix ".release"
             signingConfig signingConfigs.release
             minifyEnabled true
             shrinkResources true
@@ -87,6 +89,9 @@ dependencies {
     implementation androidLibrary.lifecycleViewModel
     implementation androidLibrary.lifecycleLiveData
     implementation androidLibrary.lifecycleRuntime
+
+    implementation platform('com.google.firebase:firebase-bom:29.2.1')
+    implementation 'com.google.firebase:firebase-analytics'
 
     implementation 'com.facebook.shimmer:shimmer:0.5.0'
 

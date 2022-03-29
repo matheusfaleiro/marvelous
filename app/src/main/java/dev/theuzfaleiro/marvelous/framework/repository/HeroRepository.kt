@@ -8,8 +8,9 @@ import dev.theuzfaleiro.network.data.repository.IHeroRepository
 import dev.theuzfaleiro.network.domain.model.Hero
 import javax.inject.Inject
 
-class HeroRepository @Inject constructor(private val remoteDataSource: IHeroRemoteDataSource<CharacterDataWrapperResponse>) :
-    IHeroRepository {
+class HeroRepository @Inject constructor(
+    private val remoteDataSource: IHeroRemoteDataSource<CharacterDataWrapperResponse>
+) : IHeroRepository {
 
     override fun getHeroes(query: String): PagingSource<Int, Hero> =
         HeroPagingSource(heroRemoteDataSource = remoteDataSource, query = query)

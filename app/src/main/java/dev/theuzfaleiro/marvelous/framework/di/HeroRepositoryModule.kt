@@ -18,5 +18,7 @@ interface HeroRepositoryModule {
     fun bindsHeroRepository(heroRepository: HeroRepository): IHeroRepository
 
     @Binds
-    fun bindsHeroRemoteDataSource(heroRemoteDataSource: HeroRemoteDataSource): IHeroRemoteDataSource<CharacterDataWrapperResponse>
+    fun bindsHeroRemoteDataSource(
+        heroRemoteDataSource: HeroRemoteDataSource
+    ): IHeroRemoteDataSource<CharacterDataWrapperResponse>
 }
