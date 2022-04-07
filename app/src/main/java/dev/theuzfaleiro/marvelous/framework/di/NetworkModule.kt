@@ -5,6 +5,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import dev.theuzfaleiro.marvelous.BuildConfig
+import dev.theuzfaleiro.marvelous.framework.di.qualifier.BaseUrl
 import dev.theuzfaleiro.marvelous.framework.network.MarvelService
 import dev.theuzfaleiro.marvelous.framework.network.interceptor.AuthorizationInterceptor
 import java.util.Calendar
@@ -24,9 +25,6 @@ object NetworkModule {
     @Provides
     fun providesNetworkService(retrofit: Retrofit): MarvelService =
         retrofit.create(MarvelService::class.java)
-
-    @Provides
-    fun providesBaseUrl(): String = BuildConfig.BASE_URL
 
     @Provides
     fun providesMoshiConverterFactory(): GsonConverterFactory = GsonConverterFactory.create()
@@ -60,7 +58,7 @@ object NetworkModule {
 
     @Provides
     fun providesRetrofit(
-        baseUrl: String,
+        @BaseUrl baseUrl: String,
         okHttpClient: OkHttpClient,
         converterFactory: GsonConverterFactory
     ): Retrofit =

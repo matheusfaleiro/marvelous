@@ -11,10 +11,10 @@ java {
 dependencies {
     testImplementation project(':testing')
 
-    def paging_version = "3.1.0"
+    def paging_version = '3.1.1'
     implementation "androidx.paging:paging-common:$paging_version"
 
-    api 'com.google.code.gson:gson:2.8.6'
+    api 'com.google.code.gson:gson:2.9.0'
 
     implementation library.coroutines
 
