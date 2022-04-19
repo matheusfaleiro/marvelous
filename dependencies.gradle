@@ -28,7 +28,7 @@ ext {
             jUnitVersion         : '4.13.2',
             mockkVersion         : '1.12.3',
             coreVersion          : '1.4.0',
-            kotestVersion        : '5.1.0',
+            kotestVersion        : '5.2.2',
             roboeletricVersion   : '4.6.1',
             archCoreVersion      : '2.1.0',
             coroutinesTestVersion: '1.6.0'
